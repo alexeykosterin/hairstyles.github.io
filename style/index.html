@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Drop-down menu</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/scroll.css">
+  <link rel="shortcut icon" href="img/1.jpg" type="image/png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js?hl=ru'></script>
+<style>
+.jumbotron{
+background-image: url("https://github.com/bzzzmedoslav/bzzzmedoslav.github.io/blob/master/bee/image/logo.png?raw=true");
+background-size: 100% 100%;
+background-position: center top;
+}
+</style>
+<style>
+.Absolute-Center
+{
+  margin: auto;
+  position: absolute;
+ text-align: center;
+  left: 10%; right: 10%;
+}
+</style>
+</head>
+
+<body>
+
+  	<header class="cd-header">
+		<div class="header-wrapper">
+			<div class="logo-wrap">
+				<a href="#" style="text-decoration: none;" class="hover-target"><span class="fas fa-cut"></span>logo</a>
+			</div>
+			<div class="nav-but-wrap">
+				<div class="menu-icon hover-target">
+					<span class="menu-icon__line menu-icon__line-left"></span>
+					<span class="menu-icon__line"></span>
+					<span class="menu-icon__line menu-icon__line-right"></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="nav">
+		<div class="nav__content">
+			<ul class="nav__list">
+				<li class="nav__list-item active-nav"><a href="javascript:scroll(0,0)" class="hover-target">Home</a></li>
+				<li class="nav__list-item"><a href="#section02" class="hover-target">Portfolio</a></li>
+				<li class="nav__list-item"><a href="#section03" class="hover-target">Studio</a></li>
+				<li class="nav__list-item"><a href="location.html" class="hover-target">Location</a></li>
+				<li class="nav__list-item"><a href="#section05" class="hover-target">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+
+	<div class='cursor' id="cursor"></div>
+	<div class='cursor2' id="cursor2"></div>
+	<div class='cursor3' id="cursor3"></div>
+
+
+	<a href="https://instagram.com" class="link-to-portfolio hover-target"><span style = "font-size:40px; color: #8167a9" class="fab fa-instagram"></span></a>
+    <a href="https://api.whatsapp.com/send?phone=79607835705&text=Добрый день, мне нужна ваша услуга :)" class="link-to-whatsapp hover-target"><span style = "font-size:40px; color: #8167a9" class="fab fa-whatsapp-square"></span></a>
+   <script src="//code.jquery.com/jquery-latest.js"></script>
+
+
+
+    <script  src="js/headdress.js"></script>
+
+</body>
+
+
+<body>
+<section>
+
+
+
+
+  <section id="section01" class="demo">
+
+
+<div class="container">
+  <div class="jumbotron">
+
+
+<p><aa class="btn btn-lg" data-toggle="modal" data-target="#feedback">Обратная связь</aa></p>
+
+
+	<div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Обратная связь</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="contactForm" action="mailto: alexey_kosterin@mail.ru" method="post">
+						<div class="form-group">
+							<label for="name">Ваше имя:</label>
+							<input id="name" class="form-control" name="name" required type="text" placeholder="Ваше имя">
+						</div>
+						<div class="form-group">
+							<label for="email">Ваш E-mail:</label>
+							<input id="email" class="form-control" name="email" required type="email" placeholder="ivanov@email.com">
+						</div>
+						<div class="form-group">
+							<label for="phone">Ваш телефон:</label>
+							<input id="phone" class="form-control" name="phone" required type="text" placeholder="+7 (800) 000-00-00">
+						</div>
+						<div class="form-group">
+							<label for="message">Текст сообщения:</label>
+							<textarea id="message" class="form-control" required name="message" rows="4"></textarea>
+						</div>
+						<div class="form-group form-check">
+							<input id="check" class="form-check-input" checked type="checkbox">
+							<label class="form-check-label" for="check">Я добровольно отправляю свои данные</label>
+						</div>
+                        <div class="g-recaptcha" data-sitekey="6LcwppIUAAAAAGFMa5QApGgXB0UIf7dLEbDwXiLS"></div>
+						<button id="button" class="btn btn-success" type="submit">Отправить</button>
+						<div class="result">
+							<span id="answer"></span>
+							<span id="loader" style="display:none"><img src="images/loader.gif" alt=""></span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+	<script src="js/jquery.maskedinput.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+
+
+      <!--<p><span style="padding-right:3px; padding-top: 3px; display:inline-block;"><img src="img/1.jpg"></img>здесь вы можете приобрести мёд с частной пасеки Алтайского края</span></p>-->
+  </div>
+  <div class="row Absolute-Center">
+    <div class="col-sm-4">
+      <h3><span style="color: #ffffff">Сертификат</span></h3>
+    </div>
+    <div class="col-sm-4">
+      <h3><span style="color: #ffffff">Сертификат</span></h3>
+    </div>
+    <div class="col-sm-4">
+      <h3><span style="color: #ffffff">Сертификат</span></h3>
+    </div>
+  </div>
+</div>
+
+
+	  <a href="#section02"><span></span>TO BEGIN</a>
+</section>
+	<nav class="circle">
+    <ul>
+      <li><a href="javascript:scroll(0,0)">Home</a></li>
+      <li><a href="#section02">About</a></li>
+      <li><a href="#section03">Downloads</a></li>
+      <li><a href="#section04">More</a></li>
+      <li><a href="#section05">Nice staff</a></li>
+    </ul>
+  </nav>
+
+
+
+
+</section>
+<section>
+<section id="section02" class="demo">
+
+  <a href="#section03"><span></span></a>
+
+</section>
+		<nav class="circle">
+    <ul>
+      <li><a href="javascript:scroll(0,0)">Home</a></li>
+      <li><a href="#zatemnenie">About</a></li>
+      <li><a href="#">Downloads</a></li>
+      <li><a href="#">More</a></li>
+      <li><a href="#">Nice staff</a></li>
+    </ul>
+  </nav>
+</section>
+<section id="section03" class="demo">
+  <h1>Scroll Down Button #3</h1>
+  <a href="#section04"><span></span></a>
+</section>
+<section id="section04" class="demo">
+  <h1>Scroll Down Button #4</h1>
+  <a href="#section05"><span></span></a>
+</section>
+<section id="section05" class="demo">
+  <h1>Scroll Down Button #5</h1>
+  <a href="#section06"><span></span></a>
+</section>
+<section id="section06" class="demo">
+  <h1>Scroll Down Button #6</h1>
+  <a href="#section07"><span></span></a>
+</section>
+<section id="section07" class="demo">
+  <h1>Scroll Down Button #7</h1>
+  <a href="#section08"><span></span></a>
+</section>
+<section id="section08" class="demo">
+  <h1>Scroll Down Button #8</h1>
+  <a href="#section09"><span></span></a>
+</section>
+<section id="section09" class="demo">
+  <h1>Scroll Down Button #9</h1>
+  <a href="#section10"><span></span></a>
+</section>
+<section id="section10" class="demo">
+  <h1>Scroll Down Button #10</h1>
+  <a href="#section01"><span></span>TO THE BEGINNING</a>
+</section>
+
+
+
+</body>
+
+
+
+
+</html>
